@@ -33,7 +33,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <p className="text-sm leading-7 text-text-secondary sm:text-base">{project.summary}</p>
         </div>
 
-        {project.callout ? <p className="text-sm font-medium text-text-primary">{project.callout}</p> : null}
+        {project.callout ? (
+          <p className="text-sm font-medium text-text-primary">
+            {project.calloutUrl ? (
+              <a className="underline underline-offset-2 hover:opacity-70 transition-opacity" href={project.calloutUrl} rel="noopener noreferrer" target="_blank">
+                {project.callout}
+              </a>
+            ) : (
+              project.callout
+            )}
+          </p>
+        ) : null}
 
         <TagList tags={project.tags} tone={tone} />
 

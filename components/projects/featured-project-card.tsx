@@ -24,7 +24,17 @@ export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
             {project.title}
           </h3>
           <p className="text-base leading-7 text-text-secondary">{project.summary}</p>
-          {project.callout ? <p className="text-sm font-medium text-text-primary">{project.callout}</p> : null}
+          {project.callout ? (
+            <p className="text-sm font-medium text-text-primary">
+              {project.calloutUrl ? (
+                <a className="underline underline-offset-2 hover:opacity-70 transition-opacity" href={project.calloutUrl} rel="noopener noreferrer" target="_blank">
+                  {project.callout}
+                </a>
+              ) : (
+                project.callout
+              )}
+            </p>
+          ) : null}
         </div>
 
         <TagList tags={project.tags} tone={tone} />

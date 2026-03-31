@@ -36,6 +36,7 @@ export type ProjectRecord = {
   status: ProjectStatus;
   tags: string[];
   callout?: string;
+  calloutUrl?: string;
   problemIntro?: string;
   problemPoints: string[];
   approachPoints: string[];
@@ -246,6 +247,7 @@ export const allProjects: ProjectRecord[] = [
     status: "Prototype",
     tags: ["Agentic AI", "DAG orchestration", "Supabase"],
     callout: "2nd place at Tetrate buildathon.",
+    calloutUrl: "https://tetrate.io/blog/workflowiq-buildathon-runner-up",
     problemIntro:
       "AI agents are powerful but risky when they have too much access, too little structure, or unclear boundaries.",
     problemPoints: [

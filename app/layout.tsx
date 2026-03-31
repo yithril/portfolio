@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Sora, Geist_Mono } from "next/font/google";
 import type { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/next";
 
 import { PageShell } from "@/components/layout/page-shell";
 import { siteMeta } from "@/lib/site-data";
@@ -38,6 +39,7 @@ export default function RootLayout({
     >
       <body className="min-h-full">
         <PageShell>{children}</PageShell>
+        <Analytics />
       </body>
     </html>
   );

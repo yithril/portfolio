@@ -17,7 +17,15 @@ export function ProjectHero({ project }: ProjectHeroProps) {
         <EyebrowLabel>{project.category}</EyebrowLabel>
         <div className="space-y-4">
           {project.callout ? (
-            <p className="text-sm font-medium text-text-muted">{project.callout}</p>
+            <p className="text-sm font-medium text-text-muted">
+              {project.calloutUrl ? (
+                <a className="underline underline-offset-2 hover:opacity-70 transition-opacity" href={project.calloutUrl} rel="noopener noreferrer" target="_blank">
+                  {project.callout}
+                </a>
+              ) : (
+                project.callout
+              )}
+            </p>
           ) : null}
           <h1 className="max-w-4xl font-heading text-4xl font-bold tracking-[-0.04em] text-text-primary sm:text-5xl lg:text-6xl">
             {project.title}
