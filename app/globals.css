@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0b1020;
+  --bg-elevated: #121933;
+  --surface: rgba(255, 255, 255, 0.04);
+  --text-primary: #eef2ff;
+  --text-secondary: #9eb3c2;
+  --text-muted: #7f8aa8;
+  --border: rgba(158, 179, 194, 0.2);
+  --accent-tech: #1c7293;
+  --accent-creative: #9ce37d;
+  --accent-warm: #e4572e;
+  --accent-data: #a78bfa;
+  --accent-tech-soft: rgba(28, 114, 147, 0.2);
+  --accent-creative-soft: rgba(156, 227, 125, 0.2);
+  --accent-data-soft: rgba(167, 139, 250, 0.18);
+
+  /* Compatibility aliases for existing semantic class names */
+  --background: var(--bg);
+  --background-elevated: var(--bg-elevated);
+  --surface-soft: var(--surface);
+  --border-strong: rgba(158, 179, 194, 0.32);
+  --accent-tech-border: rgba(28, 114, 147, 0.36);
+  --accent-creative-border: rgba(156, 227, 125, 0.34);
+  --accent-data-border: rgba(167, 139, 250, 0.34);
+  --accent-blue: var(--accent-tech);
+  --focus-ring: rgba(28, 114, 147, 0.45);
+  --shadow-surface:
+    0 18px 48px rgba(5, 10, 24, 0.38),
+    0 2px 10px rgba(5, 10, 24, 0.24);
+  --shadow-soft:
+    0 12px 28px rgba(5, 10, 24, 0.24),
+    0 2px 6px rgba(5, 10, 24, 0.18);
+  --radius-card: 24px;
+  --radius-button: 16px;
+  --radius-chip: 999px;
+  --content-width: 74rem;
+
+  /* Section bands */
+  --band-hero: #0b1020;
+  --band-neutral: #0f1629;
+  --band-tech: #111b30;
+  --band-systems: #0d1426;
+  --band-creative: #111922;
+  --band-resume: #121933;
+  --band-philosophy: #0f1728;
+
+  /* Chip tokens */
+  --chip-neutral-bg: rgba(255, 255, 255, 0.05);
+  --chip-neutral-border: rgba(158, 179, 194, 0.26);
+  --chip-neutral-text: var(--text-secondary);
+  --chip-tech-bg: rgba(28, 114, 147, 0.16);
+  --chip-tech-border: rgba(28, 114, 147, 0.34);
+  --chip-tech-text: var(--text-primary);
+  --chip-creative-bg: rgba(156, 227, 125, 0.16);
+  --chip-creative-border: rgba(156, 227, 125, 0.3);
+  --chip-creative-text: var(--text-primary);
+  --chip-warm-bg: rgba(228, 87, 46, 0.14);
+  --chip-warm-border: rgba(228, 87, 46, 0.34);
+  --chip-warm-text: var(--text-primary);
+  --chip-data-bg: rgba(167, 139, 250, 0.14);
+  --chip-data-border: rgba(167, 139, 250, 0.34);
+  --chip-data-text: var(--text-primary);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-elevated: var(--background-elevated);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-accent-tech: var(--accent-tech);
+  --color-accent-tech-soft: var(--accent-tech-soft);
+  --color-accent-tech-border: var(--accent-tech-border);
+  --color-accent-creative: var(--accent-creative);
+  --color-accent-creative-soft: var(--accent-creative-soft);
+  --color-accent-creative-border: var(--accent-creative-border);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-warm: var(--accent-warm);
+  --color-accent-data: var(--accent-data);
+  --color-accent-data-soft: var(--accent-data-soft);
+  --color-accent-data-border: var(--accent-data-border);
+  --color-band-hero: var(--band-hero);
+  --color-band-neutral: var(--band-neutral);
+  --color-band-tech: var(--band-tech);
+  --color-band-systems: var(--band-systems);
+  --color-band-creative: var(--band-creative);
+  --color-band-resume: var(--band-resume);
+  --color-band-philosophy: var(--band-philosophy);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-sora);
+  --font-mono: var(--font-geist-mono);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--background);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-inter), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: rgba(28, 114, 147, 0.3);
+  color: var(--text-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
