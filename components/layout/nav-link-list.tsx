@@ -9,10 +9,11 @@ import { cn } from "@/lib/utils";
 type NavLinkListProps = {
   items: NavItem[];
   className?: string;
+  linkClassName?: string;
   onNavigate?: () => void;
 };
 
-export function NavLinkList({ items, className, onNavigate }: NavLinkListProps) {
+export function NavLinkList({ items, className, linkClassName, onNavigate }: NavLinkListProps) {
   const pathname = usePathname();
 
   return (
@@ -26,6 +27,7 @@ export function NavLinkList({ items, className, onNavigate }: NavLinkListProps) 
           isActive
             ? "bg-surface text-text-primary"
             : "text-text-secondary hover:text-text-primary",
+          linkClassName,
         );
 
         if (isExternal) {
