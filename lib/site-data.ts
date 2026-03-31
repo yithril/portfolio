@@ -122,7 +122,7 @@ export const techStackGroups = [
     items: ["SQL (PostgreSQL, SQL Server, MySQL)", "Redis", "ETL pipelines", "Microservices", "Distributed systems"],
   },
   {
-    title: "AI / Applied AI",
+    title: "AI",
     description: "Practical AI systems designed to work alongside real products and deterministic logic.",
     items: ["Agentic AI", "RAG (Retrieval Augmented Generation)", "Vector databases", "LangGraph", "Prompt engineering"],
   },
@@ -410,7 +410,11 @@ export const allProjects: ProjectRecord[] = [
     ],
     demoUrl: "https://youtu.be/hu0y7TixbXo",
     githubUrl: "https://github.com/yithril/AI_DriveThru_IK",
-    imagePaths: [],
+    imagePaths: [
+      "/img/drive_thru/thumbnail.png",
+      "/img/drive_thru/menu_with_stuff.png",
+      "/img/drive_thru/screenshot.png",
+    ],
   },
   {
     slug: "legal-document-analyzer",
