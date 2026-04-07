@@ -67,9 +67,9 @@ export const resumePdfHref = "/docs/jonathan_hop_resume_latest.pdf";
 
 export const heroContent = {
   eyebrow: "Senior Full Stack Engineer",
-  title: "I build software systems with practical AI.",
+  title: "Systems that scale. Products that ship.",
   description:
-    "Senior Full Stack Engineer building distributed systems, APIs, and full-stack products, using AI where it adds real value.",
+    "Senior Full Stack Engineer specializing in distributed systems, APIs, and full-stack applications with practical AI integration.",
   primaryCta: { href: "/projects", label: "View My Work" },
   secondaryCta: { href: "https://youtu.be/l4RLcElCnRo", label: "Watch Demo" },
 };
